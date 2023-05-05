@@ -7,7 +7,6 @@ import os
 when = time.strftime("%Y-%m-%d")
 product_list = pd.DataFrame({})
 ff_list = pd.DataFrame({})
-# product_dir = "C:/Users/TibeMe_user/Desktop/project/product/RT-Mart"
 product_dir = os.getcwd()
 
 #爬非生鮮、非冷凍商品的函數
@@ -310,7 +309,7 @@ def RT_Mart_ff():
 
 
 def start_to_crawl():
-    # RT_Mart_ff()
+    RT_Mart_ff()
     RT_Mart()
     global product_list
     product_list = pd.concat([product_list,ff_list],ignore_index=1)
