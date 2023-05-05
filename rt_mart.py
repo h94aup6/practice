@@ -44,16 +44,17 @@ def RT_Mart():
                 xx = requests.session()
                 xx.keep_alive = False
                 xx.cookies.clear()
-                # requests.adapters.DEFAULT_RETRIES = 5
-                
-                a = xx.get(product_url).text
+                requests.adapters.DEFAULT_RETRIES = 5
+
+                requests.packages.urllib3.disable_warnings()
+                a = xx.get(product_url,verify=False).text
                 b = BeautifulSoup(a,"html.parser")
                 product_72_url = b.select("div.for_imgbox a")
 
                 yy = requests.session()
                 yy.keep_alive = False
                 xx.cookies.clear()
-                # requests.adapters.DEFAULT_RETRIES = 5
+                requests.adapters.DEFAULT_RETRIES = 5
                 
                 try:
                     for i in range(0,72):
@@ -64,7 +65,8 @@ def RT_Mart():
 
 
                         #去掉多餘的字、取名稱
-                        c = yy.get(product_1_url).text
+                        requests.packages.urllib3.disable_warnings()
+                        c = yy.get(product_1_url,verify=False).text
                         d = BeautifulSoup(c,"html.parser")
                         remove_useless = d.select("span#prod_title.h2")[0].text
 
@@ -232,7 +234,8 @@ def RT_Mart_ff():
 
 
                                     #去掉多餘的字、取名稱
-                                    c = yy.get(ff_1_url).text
+                                    requests.packages.urllib3.disable_warnings()
+                                    c = yy.get(ff_1_url,verify=False).text
                                     d = BeautifulSoup(c,"html.parser")
                                     remove_useless = d.select("span#prod_title.h2")[0].text
 
@@ -307,7 +310,7 @@ def RT_Mart_ff():
 
 
 def start_to_crawl():
-    RT_Mart_ff()
+    # RT_Mart_ff()
     RT_Mart()
     global product_list
     product_list = pd.concat([product_list,ff_list],ignore_index=1)
