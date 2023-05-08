@@ -112,7 +112,6 @@ class Game:
                 except:
                     pass
                 else:
-                    print(answer)
                     print("電腦出題完畢")
                     break
 
@@ -185,5 +184,5 @@ class Game:
             guess()
         
 
-a = Game().pss(2)
-# a = Game().guess_number_AABB(2)
+# a = Game().pss(2)
+a = Game().guess_number_AABB(1)
