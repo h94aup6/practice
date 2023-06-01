@@ -1,50 +1,53 @@
 class Solution:
-#     def lengthOfLongestSubstring(self,s):
-#         s_length = len(s)
-#         s_start = 0
-#         answer = 0
-#         check = []
-#         for i in range(0,s_length):
-#             for j in range(s_start,s_length):
-#                 if s[j] not in check:
-#                     check.append(s[j])
-#                 elif s[j] in check:
-#                     if len(check) > answer:
-#                         answer = len(check)
-#                     elif len(check) <= answer:
-#                         pass
-#                     check = []
-#                     break
-#             s_start+=1
-#         if len(check) > answer:
-#             answer = len(check)
-#         return answer
+    # # https://leetcode.com/problems/longest-substring-without-repeating-characters/
+    # def lengthOfLongestSubstring(self,s):
+    #     s_length = len(s)
+    #     s_start = 0
+    #     answer = 0
+    #     check = []
+    #     for i in range(0,s_length):
+    #         for j in range(s_start,s_length):
+    #             if s[j] not in check:
+    #                 check.append(s[j])
+    #             elif s[j] in check:
+    #                 if len(check) > answer:
+    #                     answer = len(check)
+    #                 elif len(check) <= answer:
+    #                     pass
+    #                 check = []
+    #                 break
+    #         s_start+=1
+    #     if len(check) > answer:
+    #         answer = len(check)
+    #     return answer
     
-# ########################################################################
-#     def reverse(self,x):
-#         # 解法1
-#         answer = int(str(x)[::-1].replace("-",""))
+########################################################################
+    # # https://leetcode.com/problems/reverse-integer/
+    # def reverse(self,x):
+    #     # 解法1
+    #     answer = int(str(x)[::-1].replace("-",""))
 
-#         # 解法2
-#         # x_list = [i for i in str(x)]
-#         # x_list.reverse()
-#         # answer = ""
-#         # for j in x_list:
-#         #     if j == "-":
-#         #         pass
-#         #     else:
-#         #         answer+=j
-#         # answer = int(answer)
+    #     # 解法2
+    #     # x_list = [i for i in str(x)]
+    #     # x_list.reverse()
+    #     # answer = ""
+    #     # for j in x_list:
+    #     #     if j == "-":
+    #     #         pass
+    #     #     else:
+    #     #         answer+=j
+    #     # answer = int(answer)
 
-#         # 不變的return判斷
-#         if answer < -2**31 or answer > 2**31 -1:
-#             return 0
-#         elif x < 0:
-#             return -answer
-#         else:
-#             return answer
+    #     # 不變的return判斷
+    #     if answer < -2**31 or answer > 2**31 -1:
+    #         return 0
+    #     elif x < 0:
+    #         return -answer
+    #     else:
+    #         return answer
 
-# ########################################################################
+########################################################################
+    # # https://leetcode.com/problems/two-sum/
     # def twoSum(self ,nums:list ,target:int):
     #     for a in nums:
     #         b = target - a
@@ -58,7 +61,8 @@ class Solution:
     #             if b in nums:
     #                 return [a_index,nums.index(b)]
 
-# ########################################################################
+########################################################################
+    # # https://leetcode.com/problems/divide-two-integers/
     # def divide(self ,dividend:int ,divisor:int):
     #     import math
     #     answer = dividend / divisor
@@ -70,7 +74,8 @@ class Solution:
     #         return math.ceil(answer)
     #     return math.floor(answer)
 
-# ########################################################################
+########################################################################
+    # # https://leetcode.com/problems/design-underground-system/
     # def __init__(self):
     #     global np
     #     import numpy as np
@@ -99,7 +104,8 @@ class Solution:
     #     if in_out_station in self.average_time:
     #         return np.mean(self.average_time[in_out_station])
     
-# ########################################################################
+########################################################################
+    # # https://leetcode.com/problems/longest-palindromic-substring/
     # def longestPalindrome(self ,s):
     #     s_start = 1
     #     s_end = len(s)
@@ -113,6 +119,18 @@ class Solution:
     #         s_start+=1
     #         s_end-=1
 
-# ########################################################################
-    def next_question(self):
+########################################################################
+    # # https://leetcode.com/problems/regular-expression-matching/
+    # def isMatch(self,s,p):
+    #     import re
+    #     if p == ".*" \
+    #         or p == f"{s[0]}*" \
+    #             or p == f"{s[0]}.*" \
+    #                 or s == p:
+    #         return True
+    #     if s in re.findall(p,s):
+    #         return True
+    #     else:
+    #         return False
+    def next_q(self):
         pass
