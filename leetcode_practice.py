@@ -132,5 +132,66 @@ class Solution:
     #         return True
     #     else:
     #         return False
+
+########################################################################
+    # # https://leetcode.com/problems/add-two-numbers/description/
+    # class ListNode:
+    #     def __init__(self, val=0, next=None):
+    #         self.val = val
+    #         self.next = next
+
+    # def addTwoNumbers(self, l1:ListNode, l2:ListNode):
+    #     l1_num = ""
+    #     while True:
+    #         try:
+    #             l1_num += str(l1.val)
+    #             l1 = l1.next
+    #         except AttributeError:
+    #             l1_num = l1_num[::-1]
+    #             break
+
+    #     l2_num = ""
+    #     while True:
+    #         try:
+    #             l2_num += str(l2.val)
+    #             l2 = l2.next
+    #         except AttributeError:
+    #             l2_num = l2_num[::-1]
+    #             break
+        
+    #     l1_num = str(int(l1_num) + int(l2_num))
+    #     for i in range(len(l1_num)):
+    #         if i == 0:
+    #             answer = Solution.ListNode(l1_num[i])
+    #         else:
+    #             answer = Solution.ListNode(l1_num[i],answer)
+            
+    #     return answer
+        
+########################################################################
+    # # https://leetcode.com/problems/multiply-strings/description/
+    # def multiply(self, num1:str, num2:str):
+    #     a,b = 0,0
+    #     for i in num1:
+    #         check = 0
+    #         while str(check) != i:
+    #             check += 1
+    #         if a == 0:
+    #             a += check
+    #         else:
+    #             a = a*10 + check
+
+    #     for j in num2:
+    #         check = 0
+    #         while str(check) != j:
+    #             check += 1
+    #         if b == 0:
+    #             b += check
+    #         else:
+    #             b = b*10 + check
+        
+    #     return str(a*b)
+
+########################################################################
     def next_q(self):
         pass
