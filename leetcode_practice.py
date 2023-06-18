@@ -193,5 +193,72 @@ class Solution:
     #     return str(a*b)
 
 ########################################################################
+    # # https://leetcode.com/problems/valid-sudoku/description/
+    # def isValidSudoku(self, board:list):
+    #     i = 0
+    #     while i < 9:
+    #         # 判斷九宮格
+    #         if i == 2 or i == 5 or i == 8:
+    #             k = 0
+    #             while k < 9:
+    #                 z = [board[z][zz] for z in range(i+1-3,i+1) for zz in range(k,k+3) if board[z][zz] != "."]
+    #                 for zz in z:
+    #                     if z.count(zz) > 1:
+    #                         return False
+    #                 k += 3
+
+    #         for x in range(9):
+    #             if board[i][x] == ".":
+    #                 pass
+    #             else:
+    #                 # 判斷橫行
+    #                 if board[i].count(board[i][x]) > 1:
+    #                     return False
+
+    #                 # 判斷直列
+    #                 y = [board[j][x] for j in range(9)]
+    #                 if y.count(board[i][x]) > 1:
+    #                     return False
+    #         i += 1
+    #     return True
+        
+########################################################################
+    # # https://leetcode.com/problems/max-points-on-a-line/
+    # def maxPoints(self, points:list):
+    #     if len(points) == 1:
+    #         return 1
+    #     elif len(points) == 2:
+    #         return 2
+        
+    #     from fractions import Fraction
+    #     i = 0
+    #     formula_dict = {}
+    #     while i < len(points):
+    #         j = i + 1
+    #         while j < len(points):
+    #             if points[i][0] == points[j][0]:
+    #                 answer_formula = f"x = {points[i][0]}"
+    #             elif points[i][1] == points[j][1]:
+    #                 answer_formula = f"y = {points[i][1]}"
+    #             else:
+    #                 a = Fraction((points[i][1] - points[j][1]),(points[i][0] - points[j][0]))
+    #                 b = points[i][1] - (points[i][0] * a)
+    #                 answer_formula = f"y = {a}x + {b}"
+                
+    #             if answer_formula not in formula_dict:
+    #                 formula_dict.update({answer_formula:1})
+    #             else:
+    #                 formula_dict[answer_formula] += 1
+    #             j += 1
+    #         i += 1
+
+    #     answer = 1
+    #     z = max(formula_dict.values())
+    #     while z != 0:
+    #         z = z - answer
+    #         answer += 1
+    #     return answer
+
+########################################################################
     def next_q(self):
         pass
