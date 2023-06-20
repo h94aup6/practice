@@ -260,5 +260,101 @@ class Solution:
     #     return answer
 
 ########################################################################
+    # # https://leetcode.com/problems/find-the-highest-altitude/description/
+    # def largestAltitude(self, gain:list):
+    #     check = answer = 0
+    #     for i in gain:
+    #         check += i
+    #         if check > answer:
+    #             answer = check
+    #     return answer
+
+########################################################################
+    # # https://leetcode.com/problems/basic-calculator/description/
+    # def cal(self,cal_s):
+    #     if "+" not in cal_s and "-" not in cal_s:
+    #         return int(cal_s)
+    #     if cal_s[0] == "-" and "+" not in cal_s[1:] and "-" not in cal_s[1:]:
+    #         return int(cal_s)
+
+    #     x = y = answer = 0
+    #     while y < len(cal_s):
+    #         if (cal_s[y] in "+-" and y != 0) or y == len(cal_s) - 1:
+    #             if y == len(cal_s) - 1:
+    #                 answer += int(cal_s[x:])
+    #             else:
+    #                 answer += int(cal_s[x:y])
+    #                 x = y
+    #         y += 1
+    #     return answer
+    
+    # def calculate(self, s:str):
+    #     s = s.replace(" ","")
+    #     b = s.find(")")
+    #     while b != -1:
+    #         a = b
+    #         while s[a] != "(":
+    #             a -= 1
+    #         s = s.replace(s[a:b+1],str(self.cal(s[a+1:b])))
+    #         if "+-" in s:
+    #             s = s.replace("+-","-")
+    #         elif "--" in s:
+    #             s = s.replace("--","+")
+    #         b = s.find(")")
+    #     return self.cal(s)
+
+########################################################################
+    # # https://leetcode.com/problems/merge-strings-alternately/description/?envType=study-plan-v2&envId=leetcode-75
+    # def mergeAlternately(self, word1: str, word2: str) -> str:
+    #     if len(word1) == 1:
+    #         return word1 + word2
+
+    #     x = 1
+    #     for i in range(len(word2)):
+    #         if x > len(word1):
+    #             return word1 + word2[i:]
+    #         else:
+    #             word1 = word1[:x] + word2[i] + word1[x:]
+    #         x += 2
+    #     return word1            
+
+########################################################################
+    # # https://leetcode.com/problems/k-radius-subarray-averages/description/
+    # # 方法一
+    # def getAverages(self, nums:list, k:int):
+    #     if k == 0:
+    #         return nums
+    #     elif k >= len(nums) / 2:
+    #         return [-1] * len(nums)
+
+    #     answer = []
+    #     for i in range(k,len(nums) - k):
+    #         if i == k:
+    #             a = sum(nums[i-k:i+k+1])
+    #         else:
+    #             a = a - nums[i-k-1] + nums[i+k]
+    #         answer.append(int(a / (k*2 + 1)))
+    #     return [-1] * k + answer + [-1] * k
+
+    # # 方法二
+    # def getAverages(self, nums:list, k:int):
+    #     if k == 0:
+    #         return nums
+    #     elif k >= len(nums) / 2:
+    #         return [-1] * len(nums)
+
+    #     answer = []
+    #     i = 0
+    #     while i + (k*2 + 1) <= len(nums):
+    #         if i == 0:
+    #             a = sum(nums[0:(k*2 + 1)])
+    #         else:
+    #             a = a - nums[i-1] + nums[i+(k * 2)]
+    #         answer.append(int(a / (k*2 + 1)))
+    #         i += 1
+    #     return [-1] * k + answer + [-1] * k
+
+########################################################################
     def next_q(self):
         pass
+
