@@ -355,13 +355,28 @@ class Solution:
     #     return [-1] * k + answer + [-1] * k
 
 ########################################################################
-    # https://leetcode.com/problems/counting-bits/?envType=daily-question&envId=2023-09-01
+    # # https://leetcode.com/problems/counting-bits/?envType=daily-question&envId=2023-09-01
     # def countBits(self, n:int) -> list[int]:
     #     answer = []
     #     for i in range(n+1):
     #         answer.append(bin(i).count("1"))
     #     return answer
 
+########################################################################
+    # # https://leetcode.com/problems/maximum-number-of-balls-in-a-box/submissions/1038438839/
+    # def countBalls(self, lowLimit:int, highLimit:int) -> int:
+    #     answer = {}
+    #     for i in range(lowLimit, highLimit + 1):
+    #         a = 0
+    #         while i != 0:
+    #             a += i % 10
+    #             i = i // 10
+    #         if a not in answer:
+    #             answer[a] = 1
+    #         else:
+    #             answer[a] += 1
+    #     return max(answer.values())
+    
 ########################################################################
     def next_q(self):
         pass
