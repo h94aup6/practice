@@ -355,6 +355,14 @@ class Solution:
     #     return [-1] * k + answer + [-1] * k
 
 ########################################################################
+    # https://leetcode.com/problems/counting-bits/?envType=daily-question&envId=2023-09-01
+    # def countBits(self, n:int) -> list[int]:
+    #     answer = []
+    #     for i in range(n+1):
+    #         answer.append(bin(i).count("1"))
+    #     return answer
+
+########################################################################
     def next_q(self):
         pass
 
